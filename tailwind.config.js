@@ -5,9 +5,6 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    screens: {
-      
-    },
     fontFamily: {
       colors: {
         'blue': '#1fb6ff',

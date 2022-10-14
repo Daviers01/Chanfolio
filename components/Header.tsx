@@ -40,8 +40,8 @@ const socialAccounts = [
 const Header = ({ title, description }: IHeaderProps) => {
   console.log(title, description);
   return (
-    <>
-      <header className="container px-20 mx-auto bg-gray-50 py-8 fixed top-0 left-0 right-0 flex justify-between items-center">
+    <header className="h-20 z-50 bg-gray-50 fixed top-0 left-0 right-0">
+      <div className="container mx-auto h-full w-full flex justify-between items-center py-8 px-6 md:px-12">
         <div className="text-left font-black text-lg text-gray-900 w-1/3">
           <p>{"<Chan />"}</p>
         </div>
@@ -54,8 +54,8 @@ const Header = ({ title, description }: IHeaderProps) => {
             );
           })}
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 };
 
