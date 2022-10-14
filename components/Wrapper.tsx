@@ -19,9 +19,13 @@ function Wrapper(props: {
     | undefined;
 }) {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Header />
-      <main className="container mx-auto">{props.children}</main>
+      <main className="w-screen">
+        <div className="container mx-auto mt-20 mb-10 py-10 px-6 md:px-12 lg:px-24 xl:px-40">
+          {props.children}
+        </div>
+      </main>
       <Footer />
     </div>
   );
