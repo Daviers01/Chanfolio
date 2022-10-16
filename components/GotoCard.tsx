@@ -1,12 +1,14 @@
+import cx from "classnames";
 import { useRouter } from "next/router";
 
-interface IButton {
+interface ICard {
   onClick?: () => void;
+  className: string;
   to: string;
   children: React.ReactNode;
 }
 
-const Button = (props: IButton) => {
+const Card = (props: ICard) => {
   const router = useRouter();
 
   const onClickHandler = () => {
@@ -14,13 +16,16 @@ const Button = (props: IButton) => {
   };
 
   return (
-    <button
-      className="my-4 p-4 bg-gray-900 inline-block rounded-lg text-lg text-white drop-shadow-2xl hover:bg-gray-800"
+    <div
+      className={cx(
+        "rounded-lg cursor-pointer shadow-lg flex flex-col justify-center",
+        props.className
+      )}
       onClick={onClickHandler}
     >
       {props.children}
-    </button>
+    </div>
   );
 };
 
-export default Button;
+export default Card;
