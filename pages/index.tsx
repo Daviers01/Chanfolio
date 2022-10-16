@@ -30,7 +30,7 @@ const Home: NextPage = (props) => {
         <p className="text-lg lg:text-2xl pt-6">
           Software Engineer based in PH.
         </p>
-        <Button>Click here to know more about me..</Button>
+        <Button to="./about">Click here to know more about me..</Button>
       </div>
       <div className="w-full lg:w-2/5 p-10 lg:p-2 text-center items-start flex justify-center">
         <Image

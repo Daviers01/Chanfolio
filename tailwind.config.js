@@ -21,6 +21,12 @@ module.exports = {
       sans: ['Poppins', 'sans-serif'],
     },
     extend: {
+      keyframes: {
+        'side-bounce': {
+          '0%, 100%': { left: '0' },
+          '50%': { left: '-2px' },
+        }
+      }
     }
   },
   plugins: [],
