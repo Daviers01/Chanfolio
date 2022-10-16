@@ -2,14 +2,15 @@ import { useRouter } from "next/router";
 
 interface IButton {
   onClick?: () => void;
-  children: any;
+  to: string;
+  children: React.ReactNode;
 }
 
 const Button = (props: IButton) => {
   const router = useRouter();
 
   const onClickHandler = () => {
-    router.push("./about");
+    router.push(props.to);
   };
 
   return (
