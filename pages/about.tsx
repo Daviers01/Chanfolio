@@ -29,12 +29,10 @@ const About: NextPage = (props) => {
         />
       </div>
       <div className="relative w-full lg:w-3/5 lg:px-8 pt-10 xl:pt-12">
-        <div className="absolute -z-10 w-max -top-20 lg:-top-2 left-16 sm:left-36 md:left-56 lg:-left-8 font-black text-gray-100 opacity-80 tracking-widest rotate-90 lg:rotate-0 text-[150px] leading-none">
+        {/* <div className="absolute -z-10 w-max -top-20 lg:-top-2 left-16 sm:left-36 md:left-56 lg:-left-8 font-black text-gray-100 opacity-80 tracking-widest rotate-90 lg:rotate-0 text-[150px] leading-none">
           ABOUT ME
-        </div>
-        <h1 className="text-2xl lg:text-4xl xl:text-5xl font-bold">
-          About me-hee
-        </h1>
+        </div> */}
+        <h1 className="text-2xl lg:text-4xl xl:text-5xl font-bold">About me</h1>
         <div className="leading-7 text-xs lg:text-sm xl:text-base tracking-normal lg:tracking-wider xl:tracking-widest">
           <p className="pt-8">
             👋 Hi, I'm <span className="font-bold">Chan Laurente</span> from
