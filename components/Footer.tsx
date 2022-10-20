@@ -1,43 +1,72 @@
-import Image from "next/image";
-
-const socialAccounts = [
-  {
-    href: "https://www.linkedin.com",
-    name: "LinkedIn.",
-  },
-  {
-    href: "https://www.github.com",
-    name: "Github.",
-  },
-  {
-    href: "mailto:daviers01@gmail.com",
-    name: "Daviers01@gmail.com",
-  },
-];
+import GotoCard from "../components/GotoCard";
+import cx from "classnames";
+import { useRouter } from "next/router";
+import { routes } from "../utils/routes";
 
 const Footer = () => {
+  const router = useRouter();
+
+  const current = routes.find((route) => route.link === router.route);
+  const prev = current
+    ? routes.find((route) => route.order == current.order - 1)
+    : null;
+  const next = current
+    ? routes.find((route) => route.order == current.order + 1)
+    : null;
+
   return (
-    <footer className="h-20 z-50 bg-gray-50">
-      <div className="container mx-auto h-full w-full flex justify-between items-center py-8 px-6 md:px-12">
-        <div className="text-left text-sm text-gray-700 w-2/3">
-          <p>This site was built from scratch using NextJS.</p>
-        </div>
-        <div className="text-right text-sm font-bold text-gray-700 w-1/3 flex justify-between">
-          {socialAccounts.map((social, i) => {
-            return (
-              <a
-                key={social.name + i}
-                {...social}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {social.name}
-              </a>
-            );
-          })}
-        </div>
+    <>
+      <div
+        className={cx(
+          "h-26 pb-10 px-4 w-full container mx-auto relative bottom-0 right-0 left-0 flex flex-row",
+          next && prev ? "block" : "hidden"
+        )}
+      >
+        {prev && (
+          <GotoCard
+            to={prev.link}
+            className={cx(
+              "mt-2 group transition-all relative text-right bg-chan-dark hover:bg-transparent border-4 border-spacing-2 border-chan-dark border-solid py-3 px-4 lg:px-8 rounded-lg",
+              next ? "w-full md:w-1/2 mx-2" : "w-auto"
+            )}
+          >
+            <p className="transition-all text-xs text-chan-light group-hover:text-chan-dark">
+              Go back
+            </p>
+            <p className="text-xl lg:text-2xl text-chan-light group-hover:text-chan-dark font-bold">
+              {prev.name}
+            </p>
+            <span className="transition-all text-chan-light group-hover:text-chan-dark text-3xl absolute bottom-7 lg:bottom-5 left-7 group-hover:left-5 md:left-14 text-end">
+              &#8592;
+            </span>
+          </GotoCard>
+        )}
+
+        {next && (
+          <GotoCard
+            to={next.link}
+            className={cx(
+              "mt-2 group transition-all relative text-left bg-chan-dark hover:bg-transparent border-4 border-spacing-2 border-chan-dark border-solid py-3 px-4 lg:px-8 rounded-lg",
+              prev ? "w-full md:w-1/2 mx-2" : "w-full"
+            )}
+          >
+            <p className="transition-all text-xs text-chan-light group-hover:text-chan-dark">
+              Go to
+            </p>
+            <p className="text-xl lg:text-2xl text-chan-light group-hover:text-chan-dark font-bold">
+              {next.name}
+            </p>
+            <span className="transition-all text-chan-light group-hover:text-chan-dark text-3xl absolute bottom-7 lg:bottom-5 right-7 group-hover:right-5 md:right-14 text-end">
+              &#8594;
+            </span>
+          </GotoCard>
+        )}
       </div>
-    </footer>
+
+      <div className="h-2 fixed bottom-0 left-0 right-0 z-50 bg-chan-dark"></div>
+      <div className="w-2 fixed top-0 left-0 bottom-0 z-50 bg-chan-dark"></div>
+      <div className="w-2 fixed top-0 right-0 bottom-0 z-50 bg-chan-dark"></div>
+    </>
   );
 };
 

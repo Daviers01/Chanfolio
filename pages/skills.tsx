@@ -1,59 +1,109 @@
 import type { NextPage } from "next";
-import Image from "next/future/image";
-
-// This function gets called at build time
-export async function getStaticProps() {
-  // Call an external API endpoint to get posts
-  const res = await fetch("http://localhost:3000/api/hello");
-
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
-  return {
-    props: {
-      data: await res.json(),
-    },
-  };
-}
+import Card from "../components/Card";
 
 const skillset = [
-  "Agile / Scrum",
-  "React - Redux",
-  "Vue - Vuex",
-  "Node - Express",
-  "HTML, CSS and Javascript",
-  "SASS / SCSS",
-  "CSS Tools and Frameworks: Tailwind, Ant Design, Bootstrap, Material UI",
-  "Responsive Web Design (Media queries, Flexbos & Grid)",
-  "Databases (MySQL, MSSQL, NoSQL)",
-  "Mobile Development (React Native)",
-  "API (REST, GraphQL)",
-  "Cloud Computing: (Amazon AWS, Microsoft Azure, Firebase)",
-  "Content Management System: (Wordpress, Headless CMS)",
-  "Package Managers (NPM, Yarn)",
-  "Design Tools (Figma, Balsamic, Adobe Photoshop)",
-  "Version Control (GIT, Gitflow)",
-  "Data visualization (Highcharts, PowerBI)",
-  "Customer Data Platform: Tag Management (Tealium, Google tag manager)",
+  {
+    name: "HTML",
+    image: "/html-logo.png",
+  },
+  {
+    name: "CSS",
+    image: "/css-logo.png",
+  },
+  {
+    name: "Javascript",
+    image: "/js-logo.png",
+  },
+  {
+    name: "React",
+    image: "/react-logo.png",
+  },
+  {
+    name: "Vue",
+    image: "/vue-logo.png",
+  },
+  {
+    name: "NodeJS",
+    image: "/node-logo.png",
+  },
+  {
+    name: "Redux",
+    image: "/redux-logo.png",
+  },
+  {
+    name: "GraphQL",
+    image: "/graphql-logo.png",
+  },
+  {
+    name: "NPM",
+    image: "/npm-logo.png",
+  },
+  {
+    name: "Figma",
+    image: "/figma-logo.png",
+  },
+  {
+    name: "Git",
+    image: "/git-logo.png",
+  },
 ];
 
-const Skills: NextPage = (props) => {
-  console.log(props);
+const others = [
+  {
+    name: "AWS",
+    image: "/logo-aws.png",
+  },
+  {
+    name: "Microsoft Azure",
+    image: "/logo-microsoft.png",
+  },
+  {
+    name: "Tailwind",
+    image: "/tailwind-logo.png",
+  },
+  {
+    name: "Ant Design",
+    image: "/antd-logo.png",
+  },
+  {
+    name: "Bootstrap",
+    image: "/bootstrap-logo.png",
+  },
+  {
+    name: "MySQL",
+    image: "/mysql-logo.png",
+  },
+  {
+    name: "Firebase",
+    image: "/firebase-logo.png",
+  },
+  {
+    name: "Wordpress",
+    image: "/wordpress-logo.png",
+  },
+  {
+    name: "Highcharts",
+    image: "/highcharts-logo.png",
+  },
+  {
+    name: "Tealium",
+    image: "/logo-tealium.png",
+  },
+];
+
+const Skills: NextPage = () => {
   return (
     <div className="flex flex-col lg:flex-row lg:justify-between">
       <div className="relative w-full lg:px-8 pt-10 xl:pt-12">
-        {/* <div className="absolute top-0 -z-10 w-max font-black text-gray-100 opacity-80 tracking-widest text-9xl leading-none">
-          TECH & TOOLS
-        </div> */}
-        <h1 className="text-2xl lg:text-4xl xl:text-5xl font-bold">
-          My Skills
-        </h1>
+        <h1 className="text-4xl xl:text-5xl text-center font-bold">Skills</h1>
         <div className="leading-7 text-xs lg:text-sm xl:text-base tracking-normal lg:tracking-wider xl:tracking-widest">
-          <div className="mt-10 p-5 rounded-2xl">
-            <ul className="list-disc">
-              {skillset.map((skill, i) => {
-                return <li key={i}>{skill}</li>;
-              })}
-            </ul>
+          <div className="mt-10 p-5 rounded-2xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            {skillset.map((props, i) => {
+              return <Card key={i} {...props} />;
+            })}
+            {others.map((props, i) => {
+              return <Card key={i} {...props} />;
+            })}
           </div>
         </div>
       </div>
