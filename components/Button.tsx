@@ -1,9 +1,11 @@
 import { useRouter } from "next/router";
+import cx from "classnames";
 
 interface IButton {
   onClick?: () => void;
   to: string;
   children: React.ReactNode;
+  className?: string;
 }
 
 const Button = (props: IButton) => {
@@ -15,7 +17,10 @@ const Button = (props: IButton) => {
 
   return (
     <button
-      className="my-4 p-4 bg-gray-900 inline-block rounded-lg text-lg text-white drop-shadow-2xl hover:bg-gray-800"
+      className={cx(
+        "my-4 p-4 bg-gray-900 inline-block rounded-lg text-lg text-white drop-shadow-2xl hover:bg-gray-800",
+        props.className
+      )}
       onClick={onClickHandler}
     >
       {props.children}
