@@ -20,12 +20,12 @@ const About: NextPage = (props) => {
           </h1>
           <div className="leading-7 text-xs lg:text-sm xl:text-base tracking-normal lg:tracking-wider xl:tracking-widest">
             <p className="pt-8">
-              👋 Hi, I'm <span className="font-bold">Chan Laurente</span> from
-              Philippines. I'm a full time web developer with over 5 years of
-              professional experience. I specialise in front end development,
-              but also doing backend works. I am highly skilled in JavaScript
-              and knowledgeable in some of it’s popular libraries and frameworks
-              such as{" "}
+              👋 Hi, I&apos;m <span className="font-bold">Chan Laurente</span>{" "}
+              from Philippines. I&apos;m a full time web developer with over 5
+              years of professional experience. I specialise in front end
+              development, but also doing backend works. I am highly skilled in
+              JavaScript and knowledgeable in some of it’s popular libraries and
+              frameworks such as{" "}
               <a href="" className="text-blue-500 font-medium">
                 ReactJS
               </a>{" "}
