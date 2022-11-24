@@ -41,7 +41,7 @@ const Header = (props: IHeaderProps) => {
 
   return (
     <>
-      <div className="text-right text-sm font-bold text-gray-700 hidden lg:flex flex-col justify-center fixed -top-0 left-4 bottom-0 w-30 h-full">
+      {/* <div className="text-right text-sm font-bold text-chan-gray hidden lg:flex flex-col justify-center fixed -top-0 left-4 bottom-0 w-30 h-full">
         {socialAccounts.map((social, i) => {
           return (
             <Link key={social.name + i} href={social.href} target="_blank">
@@ -55,63 +55,12 @@ const Header = (props: IHeaderProps) => {
             </Link>
           );
         })}
-      </div>
-      <header className="h-20 z-50 fixed top-0 left-0 right-0 bg-chan-dark">
+      </div> */}
+      <header className="h-20 z-50 absolute top-0 left-0 right-0">
         <div className="container mx-auto h-full w-full flex justify-between items-center py-8 px-6">
-          <div className="text-left font-black text-lg text-gray-900 w-1/5 xl:w-3/5">
-            <Link href="./">
-              <div className="cursor-pointer">
-                <span className="bg-chan-light px-3 py-2 font-black text-chan-dark rounded-md">
-                  cl.
-                </span>
-                <span className="pl-2 tracking-widest font-bold text-chan-light hidden xl:inline">
-                  christian laurente
-                </span>
-              </div>
-            </Link>
+          <div className="text-left font-black text-2xl text-gray-900">
+            <Link href="./">chan.</Link>
           </div>
-
-          <div className="w-4/5 xl:w-2/5 h-full relative overflow-hidden">
-            <div
-              className={classNames(
-                "text-right text-xs md:text-sm font-normal w-full tracking-widest text-chan-light opacity-95 flex justify-between absolute transition-transform duration-100 translate-x-0",
-                !isMenuToggled && "translate-x-[900px]"
-              )}
-            >
-              {routes.map((route, i) => {
-                return (
-                  <Link key={route.name + i} href={route.link}>
-                    <a className="px-2">{route.name}</a>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-
-          <button className="relative group" onClick={toggleMenu}>
-            <div className="relative flex overflow-hidden items-center justify-center w-[50px] h-[50px] transform transition-all ">
-              <div className="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
-                <div
-                  className={classNames(
-                    "bg-white h-[2px] w-7 transform transition-all duration-300 origin-left",
-                    isMenuToggled && "rotate-[42deg]"
-                  )}
-                ></div>
-                <div
-                  className={classNames(
-                    "bg-white h-[2px] w-1/2 rounded transform transition-all duration-300",
-                    isMenuToggled && "-translate-x-10"
-                  )}
-                ></div>
-                <div
-                  className={classNames(
-                    "bg-white h-[2px] w-7 transform transition-all duration-300 origin-left",
-                    isMenuToggled && "-rotate-[42deg]"
-                  )}
-                ></div>
-              </div>
-            </div>
-          </button>
         </div>
       </header>
     </>
