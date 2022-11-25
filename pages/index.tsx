@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Image from "next/future/image";
 import Banner from "../sections/Banner";
 import About from "../sections/About";
@@ -17,16 +18,16 @@ const Home: NextPage = (props) => {
       <Wrapper type="banner">
         <Banner />
       </Wrapper>
-      <Wrapper className={"pt-10"}>
+      <Wrapper noline className={"pt-10"}>
         <About />
       </Wrapper>
       <Wrapper>
         <Skills />
       </Wrapper>
-      <Wrapper>
+      <Wrapper noline type="footer">
         <Projects />
       </Wrapper>
-      <Wrapper>
+      <Wrapper noline>
         <div className="flex flex-col lg:flex-row gap-20">
           <div className="flex-1 xl:basis-1/3">
             <Experiences />
