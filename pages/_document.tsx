@@ -19,7 +19,7 @@ export default function Document() {
         />
 
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-R7PK4R35RY`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${GTM_ID}`}
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -28,7 +28,7 @@ export default function Document() {
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-R7PK4R35RY');
+          gtag('config', '${GTM_ID}');
         `}
         </Script>
       </Head>

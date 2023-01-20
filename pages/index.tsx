@@ -1,7 +1,5 @@
 import type { NextPage } from "next";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Image from "next/future/image";
 import Banner from "../sections/Banner";
 import About from "../sections/About";
 import Wrapper from "../components/Wrapper";

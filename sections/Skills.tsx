@@ -87,6 +87,10 @@ const others = [
     name: "Tealium",
     image: "/logo-tealium.png",
   },
+  {
+    name: "Kajabi",
+    image: "/kajabi.svg",
+  },
 ];
 
 const Skills = () => {
