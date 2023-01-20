@@ -16,7 +16,7 @@ const Projects = () => {
             <div className="">
               <Image
                 className="mx-auto w-full h-full"
-                src={"/preceptor-site.png"}
+                src={"/preceptor-nest-site.png"}
                 alt="My image"
                 width={500}
                 height={500}
