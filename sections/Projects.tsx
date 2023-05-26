@@ -5,6 +5,15 @@ const Projects = () => {
   return (
     <>
       <div className="text-5xl font-bold pb-12">My Recent Projects</div>
+      <div className="flex flex-col lg:flex-row gap-20 text-xl leading-snug tracking-normal font-medium">
+        <div className="flex-1">
+          <p className="mb-20">
+            Some of the projects that I made from freelancing and self
+            studying..
+          </p>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:flex-row gap-20 justify-around leading-7 text-xs lg:text-sm xl:text-base tracking-normal lg:tracking-wider xl:tracking-widest">
         <div className="flex flex-col hover:lg:scale-105 w-full transition-all cursor-pointer">
           <Link href="hhttps://www.psycheup.com/" target="_blank">
