@@ -22,13 +22,13 @@ const About = () => {
       </div>
       <div className="flex-1">
         <p className="mb-5">
-          I am currently working at{" "}
-          <span className="text-[#6a2c55] font-bold">Accenture Inc.</span> as
-          Software Engineering Specialist.
+          I'm currently working in{" "}
+          <span className="text-[#6a2c55] font-bold">Dentsu</span> as
+          Analytics Implementation Consultant. 
         </p>
         <p className="mb-5">
           I am certified Cloud Practitioner in AWS and Microsoft Azure and
-          continuously learning Cloud Computing and other cutting-edge
+          continuously learning anything about Web Analytics, Web Development, Cloud Computing, AI and other cutting-edge
           technologies.
         </p>
         <p className="mb-5">
