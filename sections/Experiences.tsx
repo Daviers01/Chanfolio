@@ -2,13 +2,19 @@ import Card from "../components/Card";
 
 const experiences = [
   {
+    name: "Dentsu",
+    image: "/dentsu-logo.png",
+    role: ["Analytics Implementation - Staff Consultant"],
+    date: "July 2024 - Present",
+  },
+  {
     name: "Accenture",
     image: "/logo-accenture.png",
     role: [
       "Advanced App Engineering Specialist",
       "Application Development Team Lead",
     ],
-    date: "September 2021 - Present",
+    date: "September 2021 - June 2024",
   },
   {
     name: "Stratpoint",
