@@ -8,9 +8,9 @@ const Contact = () => {
       <div className="text-5xl font-bold pb-12">Let&#39;s work together</div>
       <div className="flex flex-col lg:flex-row gap-20 text-xl leading-snug tracking-normal font-medium">
         <p className="mb-20">
-          I’m currently available for any website gigs or if you would like to
-          discuss about a project that you need help, just drop me a message on
-          my social accounts or via my personal email address at
+          I’m currently open for any website-related gigs or if you would like to
+          discuss about a project that you need help with, drop me a message on
+          my socials or email me via my personal email address at
           daviers01@gmail.com
         </p>
       </div>

@@ -50,8 +50,8 @@ const Certifications = () => {
       </div>
       <div className="flex flex-col lg:flex-row gap-20 text-xl leading-snug tracking-normal font-medium">
         <p className="mb-20">
-          The University where I graduated and some of the certifications and
-          exam I completed.
+          The University where I graduated from and some of the certifications and
+          examinations I have completed.
         </p>
       </div>
       <div className="leading-7 text-xs lg:text-sm xl:text-base tracking-normal lg:tracking-wider xl:tracking-widest">

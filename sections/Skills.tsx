@@ -99,7 +99,7 @@ const Skills = () => {
       <div className="text-5xl font-bold pb-12">My Skills</div>
       <div className="flex flex-col lg:flex-row gap-20 text-xl leading-snug tracking-normal font-medium">
         <p className="mb-20">
-          List of tools and technologies I used in projects that I worked on.
+          List of tools and technologies I used in projects that I've worked on.
         </p>
       </div>
       <div className="leading-7 text-xs lg:text-sm xl:text-base tracking-normal lg:tracking-wider xl:tracking-widest">
