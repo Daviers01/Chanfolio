@@ -35,7 +35,7 @@ const Projects = () => {
             </div>
           </Link>
           <div className="text-4xl font-bold pt-8 pb-5">PsychUp</div>
-          <Link href="hhttps://www.psycheup.com/" target="_blank">
+          <Link href="https://www.psycheup.com/" target="_blank">
             <div>Go to site &#8594;</div>
           </Link>
         </div>
@@ -111,31 +111,6 @@ const Projects = () => {
           </Link>
           <div className="text-4xl font-bold pt-8 pb-5">ABC Company</div>
           <Link href="https://abc-company.azurewebsites.net/" target="_blank">
-            <div>Go to site &#8594;</div>
-          </Link>
-        </div>
-
-        <div className="flex flex-col hover:lg:scale-105 w-full transition-all cursor-pointer">
-          <Link href="https://valorant-guide-pink.vercel.app/" target="_blank">
-            <div className="border-2 rounded-sm">
-              <div className="p-2 bg-slate-50 rounded-sm">
-                <span className="h-2 w-2 bg-gray-600 rounded-full inline-block ml-2"></span>
-                <span className="h-2 w-2 bg-gray-600 rounded-full inline-block ml-2"></span>
-                <span className="h-2 w-2 bg-gray-600 rounded-full inline-block ml-2"></span>
-              </div>
-              <div className="">
-                <Image
-                  className="mx-auto w-full h-full"
-                  src={"/banorant-agents.png"}
-                  alt="My image"
-                  width={500}
-                  height={500}
-                />
-              </div>
-            </div>
-          </Link>
-          <div className="text-4xl font-bold pt-8 pb-5">Banorant Guides</div>
-          <Link href="https://valorant-guide-pink.vercel.app/" target="_blank">
             <div>Go to site &#8594;</div>
           </Link>
         </div>

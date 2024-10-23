@@ -16,7 +16,7 @@ const About = () => {
         <p className="mb-5">
           I'm currently working in{" "}
           <span className="text-[#6a2c55] font-bold">Dentsu</span> as
-          Analytics Implementation Consultant. 
+          Analytics Implementation Consultant. I'm the owner of <a href="https://www.facebook.com/liyabdigitalph">Liyab Digital</a> 🔥.
         </p>
       </div>
       <div className="flex-1">
